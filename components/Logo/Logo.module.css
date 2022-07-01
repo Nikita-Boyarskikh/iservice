@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  height: 50px;
+  font: var(--font-main);
+}
+
+.text {
+  margin-left: 10px;
+}
+
+.small {
+  height: 20px;
+}
