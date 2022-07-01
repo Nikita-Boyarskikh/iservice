@@ -3,10 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "yarn dev",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "yarn optimize-svg && next build && next export",
+    "lint": "next lint",
+    "optimize-svg": "svgo -rf public --config=.svgo.yml"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "engines": {
+    "node": "17.0",
+    "yarn": "1.22"
   },
   "dependencies": {
     "next": "12.2.0",
@@ -15,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "8.18.0",
-    "eslint-config-next": "12.2.0"
+    "eslint-config-next": "12.2.0",
+    "svgo": "2.8.0"
   }
 }
