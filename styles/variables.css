@@ -4,22 +4,27 @@
 
   --color-background-main: #ffffff;
   --color-background-secondary: #e5e5e5;
+  --color-background-menu: #131313;
 
   --color-border-main: #c5c5c5;
+  --color-border-menu: #515151;
 
   --border-main: 1px solid var(--color-border-main);
+  --border-menu: 1px solid var(--color-border-menu);
 
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-bold: 700;
 
   --font-size-small: 12px;
+  --font-size-menu: 14px;
   --font-size-main: 16px;
   --font-size-name: 18px;
   --font-size-caption: 24px;
   --font-size-header: 30px;
 
   --line-height-small: 22px;
+  --line-height-menu: 16px;
   --line-height-main: 20px;
   --line-height-name: 20px;
   --line-height-caption: 30px;
@@ -29,12 +34,13 @@
 
   --font-small: var(--font-weight-regular) var(--font-size-small)/var(--line-height-small) var(--font-family-main);
   --font-main: var(--font-weight-regular) var(--font-size-main)/var(--line-height-main) var(--font-family-main);
+  --font-menu: var(--font-weight-regular) var(--font-size-menu)/var(--line-height-menu) var(--font-family-main);
   --font-caption: var(--font-weight-regular) var(--font-size-caption)/var(--line-height-caption) var(--font-family-main);
   --font-header: var(--font-weight-medium) var(--font-size-header)/var(--line-height-header) var(--font-family-main);
   --font-name: var(--font-weight-bold) var(--font-size-name)/var(--line-height-name) var(--font-family-main);
 }
 
-@media --desktop-media {
+@media (--desktop-media) {
   --font-size-header: 50px;
   --line-height-header: 60px;
 }

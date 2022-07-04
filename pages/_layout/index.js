@@ -1,12 +1,12 @@
-import Header from 'components/header'
-import Footer from 'components/footer'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
 
 import styles from './Layout.module.css'
 
 const Layout = ({ children }) => (
   <div className={styles.container}>
     <Header />
-    <main>{children}</main>
+    <main className={styles.main}>{children}</main>
     <Footer />
   </div>
 )

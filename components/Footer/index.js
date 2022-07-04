@@ -4,6 +4,67 @@ import Logo, { SIZES as LOGO_SIZES } from 'components/Logo'
 
 import styles from './Footer.module.css'
 
+export const MENU_ITEMS = [
+  [
+    [
+      {
+        name: 'О компании',
+        href: '/',
+      },
+      {
+        name: 'Как мы работаем',
+        href: '/',
+      },
+      {
+        name: 'Гарантия',
+        href: '/',
+      },
+      {
+        name: 'Вакансии',
+        href: '/',
+      },
+      {
+        name: 'Контакты',
+        href: '/',
+      },
+    ],
+    [
+      {
+        name: 'Новости',
+        href: '/',
+      },
+      {
+        name: 'Блог',
+        href: '/',
+      },
+      {
+        name: 'Акции и скидки',
+        href: '/',
+      },
+      {
+        name: 'Отзывы клиентов',
+        href: '/reviews',
+      },
+    ],
+  ],
+  [
+    [
+      {
+        name: 'Ремонт iPhone',
+        href: { pathname: '/catalog/[deviceType]', query: { deviceType: 'phone' } },
+      },
+      {
+        name: 'Ремонт iPad',
+        href: { pathname: '/catalog/[deviceType]', query: { deviceType: 'tablet' } },
+      },
+      {
+        name: 'Ремонт MacBook',
+        href: { pathname: '/catalog/[deviceType]', query: { deviceType: 'notebook' } },
+      },
+    ],
+  ],
+]
+
 const Footer = () => (
   <footer className={styles.footer}>
     <Logo size={LOGO_SIZES.SMALL} />
@@ -18,36 +79,17 @@ const Footer = () => (
         без перерывов и выходных
       </div>
 
-      <div className={styles.menu}>
-        <ul>
-          <li><Link href="/"><a>О компании</a></Link></li>
-          <li><Link href="/"><a>Как мы работаем</a></Link></li>
-          <li><Link href="/"><a>Гарантия</a></Link></li>
-          <li><Link href="/"><a>Вакансии</a></Link></li>
-          <li><Link href="/"><a>Контакты</a></Link></li>
-        </ul>
-
-        <ul>
-          <li><Link href="/"><a>Новости</a></Link></li>
-          <li><Link href="/"><a>Блог</a></Link></li>
-          <li><Link href="/"><a>Акции и скидки</a></Link></li>
-          <li><Link href="/reviews"><a>Отзывы клиентов</a></Link></li>
-        </ul>
-      </div>
-
-      <div className={styles.menu}>
-        <ul>
-          <li><Link href={{ pathname: '/catalog/[deviceType]', query: { deviceType: 'iphone' } }}>
-            <a>Ремонт iPhone</a>
-          </Link></li>
-          <li><Link href={{ pathname: '/catalog/[deviceType]', query: { deviceType: 'ipad' } }}>
-            <a>Ремонт iPad</a>
-          </Link></li>
-          <li><Link href={{ pathname: '/catalog/[deviceType]', query: { deviceType: 'mac' } }}>
-            <a>Ремонт MacBook</a>
-          </Link></li>
-        </ul>
-      </div>
+      {MENU_ITEMS.map((menu, i) => (
+        <div key={i} className={styles.menu}>
+          {menu.map((column, i) => (
+            <ul key={i}>
+              {column.map(({ name, href }, i) => (
+                <li key={i}><Link href={href}><a>{name}</a></Link></li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      ))}
     </div>
   </footer>
 )

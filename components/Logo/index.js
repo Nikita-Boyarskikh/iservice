@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -19,8 +18,8 @@ const Logo = ({ size = SIZES.NORMAL }) => {
   return (
     <Link href="/">
       <a>
-        <span className={cn(styles.logo, { [styles.small]: size === SIZES.SMALL })}>
-          <Image alt="" src={appleIcon.src} width={iconSize} height={iconSize} />
+        <span className={styles.logo} style={{ height: iconSize }}>
+          <Image alt="logo" src={appleIcon.src} width={iconSize} height={iconSize} />
           <span className={styles.text}>iService</span>
         </span>
       </a>

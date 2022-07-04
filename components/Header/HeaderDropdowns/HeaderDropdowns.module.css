@@ -1,0 +1,28 @@
+.container {
+  font: var(--font-main);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  gap: 50px;
+  color: var(--color-text-main);
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  line-height: 25px;
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+
+  & .dropdownArrow {
+    display: flex;
+    margin-left: 5px;
+  }
+
+  & .dropdownArrowOpened {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown {
+  width: 275px;
+}

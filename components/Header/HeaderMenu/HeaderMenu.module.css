@@ -1,0 +1,37 @@
+.menu {
+  font: var(--font-main);
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+
+  & a {
+    display: contents;
+  }
+
+  & .text {
+    line-height: 25px;
+  }
+
+  & .phone {
+    display: none;
+  }
+
+  & .burger {
+    display: block;
+  }
+}
+
+@media (--desktop-media) {
+  .menu {
+    gap: 5px;
+
+    & .phone {
+      display: contents;
+    }
+
+    & .burger {
+      display: none;
+    }
+  }
+}

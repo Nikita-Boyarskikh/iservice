@@ -1,0 +1,9 @@
+.dropdown {
+  width: 170px;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

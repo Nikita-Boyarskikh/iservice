@@ -1,0 +1,7 @@
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
+  background-color: var(--color-background-menu);
+}
