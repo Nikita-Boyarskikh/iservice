@@ -13,8 +13,8 @@
     "defaults"
   ],
   "engines": {
-    "node": "16.15.1",
-    "yarn": "1.22.19"
+    "node": ">=16",
+    "yarn": ">=1.22"
   },
   "dependencies": {
     "@popperjs/core": "2.11.5",
