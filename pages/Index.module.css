@@ -1,0 +1,44 @@
+.hero {
+  color: var(--color-text-contrast);
+  background-color: var(--color-background-contrast);
+  background-image: url("/iphone-mobile.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  padding: 30px 50px 0 20px;
+
+  & .header {
+    margin: 0;
+    font: var(--font-header);
+    max-width: 450px;
+  }
+
+  & .subheader {
+    margin-top: 15px;
+    font: var(--font-main);
+  }
+}
+
+.advantages {
+  padding: 70px 50px;
+}
+
+@media (--desktop-media) {
+  .hero {
+    background-image: url("/iphone-desktop.png");
+    justify-content: center;
+    padding-left: 50px;
+    height: 600px;
+
+    & .header {
+      max-width: 450px;
+    }
+
+    & .subheader {
+      font: var(--font-caption);
+      margin-top: 50px;
+    }
+  }
+}
