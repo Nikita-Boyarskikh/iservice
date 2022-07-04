@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
-import appleIcon from 'public/icons/apple.svg'
+import AppleIcon from 'public/icons/apple.svg'
 import styles from './Logo.module.css'
 
 export const SIZES = {
@@ -19,7 +18,7 @@ const Logo = ({ size = SIZES.NORMAL }) => {
     <Link href="/">
       <a>
         <span className={styles.logo} style={{ height: iconSize }}>
-          <Image alt="logo" src={appleIcon.src} width={iconSize} height={iconSize} />
+          <AppleIcon alt="logo" />
           <span className={styles.text}>iService</span>
         </span>
       </a>

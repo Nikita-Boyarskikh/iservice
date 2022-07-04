@@ -1,19 +1,15 @@
-import Image from 'next/image'
-
 import styles from './MenuBurger.module.css'
 
-import crossIcon from 'public/icons/cross.svg'
-import burgerIcon from 'public/icons/burger.svg'
+import CrossIcon from 'public/icons/cross.svg'
+import BurgerIcon from 'public/icons/burger.svg'
 
-const MenuBurger = ({ isOpen, toggle }) => (
-  <button className={styles.trigger} onClick={toggle}>
-    <Image
-      alt={isOpen ? 'close menu' : 'open menu'}
-      src={isOpen ? crossIcon.src : burgerIcon.src}
-      width={25}
-      height={25}
-    />
-  </button>
-)
+const MenuBurger = ({ isOpen, toggle }) => {
+  const Icon = isOpen ? CrossIcon : BurgerIcon
+  return (
+    <button className={styles.trigger} onClick={toggle}>
+      <Icon alt={isOpen ? 'close menu' : 'open menu'} />
+    </button>
+  )
+}
 
 export default MenuBurger

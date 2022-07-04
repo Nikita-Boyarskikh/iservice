@@ -3,7 +3,6 @@
   font-weight: var(--font-weight-medium);
   display: flex;
   gap: 50px;
-  color: var(--color-text-main);
 }
 
 .item {

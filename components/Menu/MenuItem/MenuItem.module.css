@@ -5,7 +5,4 @@
   padding-bottom: 20px;
   margin: 15px 20px 0;
   border-bottom: var(--border-menu);
-  font: var(--font-menu);
-  filter: invert(100%);
-  color: var(--color-text-main);
 }

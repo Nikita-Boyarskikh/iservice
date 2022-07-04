@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 import Menu from 'components/Menu'
 import MenuItems from 'components/Menu/MenuItems'
@@ -8,7 +7,7 @@ import MenuItem from 'components/Menu/MenuItem'
 import useIsMobile from 'hooks/useIsMobile'
 
 import styles from './HeaderMenuProfile.module.css'
-import profileIcon from 'public/icons/profile.svg'
+import ProfileIcon from 'public/icons/profile.svg'
 
 export const HEADER_PROFILE_MENU_ITEMS = [
   {
@@ -47,12 +46,7 @@ const HeaderMenuProfile = ({ account }) => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
   const trigger = useMemo(() => (
     <div className={styles.trigger}>
-      <Image
-        alt="profile"
-        src={profileIcon.src}
-        width={25}
-        height={25}
-      />
+      <ProfileIcon alt="profile" />
       {account} ₽
     </div>
   ), [account])

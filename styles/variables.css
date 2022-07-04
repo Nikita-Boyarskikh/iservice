@@ -1,8 +1,10 @@
 :root {
   --color-text-main: #000000;
+  --color-text-contrast: #ffffff;
   --color-text-secondary: #909090;
 
   --color-background-main: #ffffff;
+  --color-background-contrast: #000000;
   --color-background-secondary: #e5e5e5;
   --color-background-menu: #131313;
 
@@ -41,6 +43,8 @@
 }
 
 @media (--desktop-media) {
-  --font-size-header: 50px;
-  --line-height-header: 60px;
+  :root {
+    --font-size-header: 50px;
+    --line-height-header: 60px;
+  }
 }

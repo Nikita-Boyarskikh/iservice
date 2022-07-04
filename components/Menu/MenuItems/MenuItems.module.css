@@ -3,5 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 20px;
-  background-color: var(--color-background-menu);
+  font: var(--font-menu);
+  color: var(--color-text-contrast);
+  background-color: var(--color-background-contrast);
 }

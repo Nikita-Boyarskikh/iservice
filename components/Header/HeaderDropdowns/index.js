@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import cn from 'classnames'
 
@@ -7,7 +6,7 @@ import Menu from 'components/Menu'
 import MenuItems from 'components/Menu/MenuItems'
 import MenuItem from 'components/Menu/MenuItem'
 
-import arrowIcon from 'public/icons/arrow.svg'
+import ArrowIcon from 'public/icons/arrow.svg'
 import styles from './HeaderDropdowns.module.css'
 
 export const HEADER_MENU_ITEMS = [
@@ -71,12 +70,7 @@ const Item = ({ name, subitems }) => {
       <a className={cn(styles.item, styles.itemWithDropdown)} onClick={handleTriggerClick}>
         {name}
         <span className={cn(styles.dropdownArrow, { [styles.dropdownArrowOpened]: isDropdownOpened })}>
-          <Image
-            alt={isDropdownOpened ? 'close dropdown' : 'open dropdown'}
-            src={arrowIcon.src}
-            width={7}
-            height={7}
-          />
+          <ArrowIcon alt={isDropdownOpened ? 'close dropdown' : 'open dropdown'} />
         </span>
       </a>
     )} offset={[0, Math.floor((60 - 25) / 2) + 1]}>
