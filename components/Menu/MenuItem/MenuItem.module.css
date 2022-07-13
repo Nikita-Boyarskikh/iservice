@@ -1,8 +1,12 @@
 .menuItem {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 20px;
-  margin: 15px 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin: 0 20px;
   border-bottom: var(--border-menu);
+
+  &:hover {
+    background-color: var(--color-background-menu);
+  }
 }

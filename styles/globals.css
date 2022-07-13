@@ -1,3 +1,11 @@
+@import "swiper/css";
+@import "swiper/css/lazy";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+@import "swiper/css/scrollbar";
+
+@import "react-loading-skeleton/dist/skeleton.css";
+
 @import "./fonts.css";
 @import "./medias.css";
 @import "./variables.css";
@@ -20,4 +28,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --swiper-navigation-size: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-star);
+
+  & .swiper-button-disabled {
+    color: #e5e5e5;
+  }
 }

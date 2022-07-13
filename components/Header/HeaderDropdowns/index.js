@@ -77,9 +77,14 @@ const Item = ({ name, subitems }) => {
       <div className={styles.dropdown}>
         <MenuItems>
           {subitems.map(({ name, href }, i) => (
-            <MenuItem key={i}>
-              <Link href={href}><a>{name}</a></Link>
-            </MenuItem>
+            <Link href={href} key={i}><a>
+              <MenuItem>
+                {name}
+                <span className={styles.moreContent}>
+                  <ArrowIcon alt="more content" />
+                </span>
+              </MenuItem>
+            </a></Link>
           ))}
         </MenuItems>
       </div>

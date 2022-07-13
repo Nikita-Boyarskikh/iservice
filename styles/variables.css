@@ -5,11 +5,12 @@
 
   --color-background-main: #ffffff;
   --color-background-contrast: #000000;
-  --color-background-secondary: #e5e5e5;
+  --color-background-secondary: #f4f4f4;
   --color-background-menu: #131313;
 
   --color-border-main: #c5c5c5;
   --color-border-menu: #515151;
+  --color-star: #decb8d;
 
   --border-main: 1px solid var(--color-border-main);
   --border-menu: 1px solid var(--color-border-menu);

@@ -24,4 +24,9 @@
 
 .dropdown {
   width: 275px;
+
+  & .moreContent {
+    transform: rotate(-90deg);
+    height: 12px;
+  }
 }

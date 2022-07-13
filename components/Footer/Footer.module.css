@@ -4,6 +4,7 @@
   background-color: var(--color-background-secondary);
   padding: 30px 20px;
   font: var(--font-small);
+  color: var(--color-text-main);
 }
 
 .content {

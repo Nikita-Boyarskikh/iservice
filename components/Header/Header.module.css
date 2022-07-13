@@ -8,22 +8,22 @@
   color: var(--color-text-contrast);
   background-color: var(--color-background-contrast);
   border-bottom: var(--border-menu);
-}
 
-.logo {
-  flex-grow: 1;
-}
+  & .logo {
+    flex-grow: 1;
+  }
 
-.dropdowns {
-  display: none;
+  & .dropdowns {
+    display: none;
+  }
 }
 
 @media (--desktop-media) {
   .header {
     padding-left: 50px;
-  }
 
-  .dropdowns {
-    display: block;
+    & .dropdowns {
+      display: block;
+    }
   }
 }

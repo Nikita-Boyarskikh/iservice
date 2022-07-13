@@ -1,0 +1,43 @@
+.swiper {
+  --swiper-progress-bar-width: 5px;
+  --swiper-progress-bar-slider-width: 9px;
+
+  --swiper-progress-bar-width-diff: calc(var(--swiper-progress-bar-slider-width) - var(--swiper-progress-bar-width));
+  --swiper-progress-bar-width-diff-abs: max(
+      var(--swiper-progress-bar-width-diff),
+      -1 * var(--swiper-progress-bar-width-diff)
+  );
+
+  width: 100%;
+
+  & .swiperElement {
+    margin-bottom: var(--swiper-progress-bar-slider-width);
+  }
+
+  & .swiperProgressBar {
+    text-align: left;
+    bottom: 0;
+    top: auto;
+    width: calc(100% - var(--swiper-progress-bar-slider-width));
+    left: calc(var(--swiper-progress-bar-slider-width) / 2);
+    background-color: var(--color-border-main);
+    height: var(--swiper-progress-bar-width);
+    border-radius: 50em;
+    margin: calc(var(--swiper-progress-bar-width-diff-abs) / 2) 0;
+
+    --slides-number: 1;
+    --current-slide: 0;
+
+    & .swiperProgressBarFill {
+      position: absolute;
+      height: var(--swiper-progress-bar-slider-width);
+      background-color: var(--color-background-menu);
+      top: calc(var(--swiper-progress-bar-width-diff-abs) / -2);
+      width: calc(100% / var(--slides-number));
+      transform: translateX(calc(var(--current-slide) * 100%)) !important;
+      transition: transform 300ms;
+      transform-origin: left;
+      border-radius: 50em;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  & .head {
+    display: flex;
+    margin-bottom: 15px;
+
+    & .avatar {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 30px;
+    }
+
+    & .nameWithRating {
+      font: var(--font-name);
+      display: flex;
+      flex-direction: column;
+
+      & .name {
+        margin: 0 0 7px;
+      }
+
+      & .stars {
+        display: flex;
+        column-gap: 6px;
+        color: var(--color-star);
+      }
+    }
+  }
+}

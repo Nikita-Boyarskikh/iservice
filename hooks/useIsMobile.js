@@ -2,7 +2,7 @@ import { useMediaQuery } from 'react-responsive'
 
 const useIsMobile = () => {
   const isDesktop = useMediaQuery({
-    query: 'screen and (min-width: 1400px)',
+    query: 'screen and (min-width: 1000px)',
   })
 
   return !isDesktop

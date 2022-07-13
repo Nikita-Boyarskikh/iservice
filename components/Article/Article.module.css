@@ -1,0 +1,31 @@
+.article {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+
+  & .image {
+    width: 100%;
+  }
+
+  & .body {
+    display: flex;
+    flex-direction: column;
+    font: var(--font-menu);
+    margin: 20px;
+
+    & .header {
+      font: var(--font-name);
+      margin-bottom: 15px;
+    }
+
+    & .text {
+      margin-bottom: 5px;
+    }
+
+    & .createdAt {
+      font: var(--font-small);
+      color: var(--color-text-secondary);
+    }
+  }
+}
