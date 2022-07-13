@@ -1,0 +1,33 @@
+.catalog {
+  & .header {
+    font: var(--font-subheader);
+    margin: 0 0 30px;
+  }
+
+  & .items {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0 55px 0 0;
+
+    & .item {
+
+    }
+
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border: 3px solid transparent;
+      background-clip: content-box;
+      background-color: var(--color-shadow);
+      border-radius: 9px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 15px;
+      background-clip: content-box;
+      background-color: var(--color-background-secondary);
+    }
+  }
+}

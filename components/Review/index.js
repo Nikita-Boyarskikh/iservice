@@ -1,9 +1,8 @@
-import { range } from 'lib/utils'
+import Rating from 'components/Rating'
 import Image from 'next/image'
 import Skeleton from 'react-loading-skeleton'
 
 import styles from './Review.module.css'
-import StarIcon from 'public/icons/star.svg'
 
 const Review = ({ name, avatar, rating = 5, children }) => (
   <div className={styles.review}>
@@ -17,11 +16,7 @@ const Review = ({ name, avatar, rating = 5, children }) => (
       </div>
       <div className={styles.nameWithRating}>
         <h3 className={styles.name}>{name || <Skeleton /> }</h3>
-        <div className={styles.stars}>
-          {range(rating).map((i) => (
-            <StarIcon alt="star" key={i} />
-          ))}
-        </div>
+        <Rating rating={rating} />
       </div>
     </div>
     <div>{children || <Skeleton count={2} />}</div>

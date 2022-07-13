@@ -1,0 +1,26 @@
+ymaps[class*="-balloon "], ymaps[class$="-balloon"] {
+  padding: 0;
+  border-radius: 10px;
+
+  & > ymaps[class$="-balloon__layout"],
+  & > ymaps[class*="-balloon__layout "] {
+    background-color: var(--color-background-secondary);
+    border-radius: 10px;
+
+    & > ymaps[class$="-balloon__content"],
+    & > ymaps[class*="-balloon__content "] {
+      background-color: var(--color-background-secondary);
+      margin: 0 15px 0 0;
+      padding: 30px 15px;
+    }
+  }
+
+  & > ymaps[class$="-balloon__tail"],
+  & > ymaps[class*="-balloon__tail "] {
+    box-shadow: none;
+
+    &::after {
+      background-color: var(--color-background-secondary);
+    }
+  }
+}

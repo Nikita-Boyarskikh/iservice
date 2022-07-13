@@ -2,6 +2,7 @@
   --color-text-main: #000000;
   --color-text-contrast: #ffffff;
   --color-text-secondary: #909090;
+  --color-text-label: #9f9f9f;
 
   --color-background-main: #ffffff;
   --color-background-contrast: #000000;
@@ -11,6 +12,12 @@
   --color-border-main: #c5c5c5;
   --color-border-menu: #515151;
   --color-star: #decb8d;
+  --color-text-link: #007bff;
+  --color-success: #2ab138;
+  --color-warning: #ffc107;
+  --color-error: #d60d38;
+
+  --color-shadow: #d9d9d9;
 
   --border-main: 1px solid var(--color-border-main);
   --border-menu: 1px solid var(--color-border-menu);
@@ -24,6 +31,7 @@
   --font-size-main: 16px;
   --font-size-name: 18px;
   --font-size-caption: 24px;
+  --font-size-subheader: 21px;
   --font-size-header: 30px;
 
   --line-height-small: 22px;
@@ -31,6 +39,7 @@
   --line-height-main: 20px;
   --line-height-name: 20px;
   --line-height-caption: 30px;
+  --line-height-subheader: 25px;
   --line-height-header: 36px;
 
   --font-family-main: -apple-system, BlinkMacSystemFont, "SF Pro", system-ui, SF, Roboto, Ubuntu, sans-serif;
@@ -39,12 +48,16 @@
   --font-main: var(--font-weight-regular) var(--font-size-main)/var(--line-height-main) var(--font-family-main);
   --font-menu: var(--font-weight-regular) var(--font-size-menu)/var(--line-height-menu) var(--font-family-main);
   --font-caption: var(--font-weight-regular) var(--font-size-caption)/var(--line-height-caption) var(--font-family-main);
+  --font-subheader: var(--font-weight-medium) var(--font-size-subheader)/var(--line-height-subheader) var(--font-family-main);
   --font-header: var(--font-weight-medium) var(--font-size-header)/var(--line-height-header) var(--font-family-main);
   --font-name: var(--font-weight-bold) var(--font-size-name)/var(--line-height-name) var(--font-family-main);
 }
 
 @media (--desktop-media) {
   :root {
+    --font-size-subheader: 25px;
+    --line-height-subheader: 30px;
+
     --font-size-header: 50px;
     --line-height-header: 60px;
   }

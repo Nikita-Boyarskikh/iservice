@@ -21,12 +21,6 @@
       & .name {
         margin: 0 0 7px;
       }
-
-      & .stars {
-        display: flex;
-        column-gap: 6px;
-        color: var(--color-star);
-      }
     }
   }
 }

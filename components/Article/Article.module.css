@@ -1,5 +1,5 @@
 .article {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px var(--color-shadow);
   margin: 15px;
   display: flex;
   flex-direction: column;

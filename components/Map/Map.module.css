@@ -1,0 +1,57 @@
+.place {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 10px;
+  grid-template-columns: 100px 1fr;
+  font: var(--font-main);
+
+  & .avatar {
+    border: 2px solid var(--color-border-main);
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  & .heading {
+    margin-bottom: 20px;
+
+    & .name {
+      font: var(--font-name);
+      margin: 0 0 10px;
+    }
+
+    & .type {
+      margin: 0 0 10px;
+    }
+
+    & .reviews {
+      margin-top: 10px;
+      color: var(--color-text-link);
+    }
+  }
+
+  & .label {
+    color: var(--color-text-label);
+  }
+
+  & .online {
+    color: var(--color-success);
+  }
+
+  & .offline {
+    color: var(--color-error);
+  }
+
+  & .good {
+    color: var(--color-success);
+  }
+
+  & .normal {
+    color: var(--color-warning);
+  }
+
+  & .bad {
+    color: var(--color-error);
+  }
+}

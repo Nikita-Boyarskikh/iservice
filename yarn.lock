@@ -1249,6 +1249,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@pbe/react-yandex-maps@^1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@pbe/react-yandex-maps/-/react-yandex-maps-1.1.8.tgz#90b6273c28445a40a287c409db49242bac81ebcb"
+  integrity sha512-jrcZCbDa18ss1SnX/ipAYpKWV2j+/ENmiQ5ulgGXSn0OssRTTNR8Bfilozt1nsRvxba5aRYz6lC4zYdZYSthdg==
+  dependencies:
+    "@types/yandex-maps" "2.1.21"
+
 "@popperjs/core@2.11.5":
   version "2.11.5"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.5.tgz#db5a11bf66bdab39569719555b0f76e138d7bd64"
@@ -1389,6 +1396,11 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@types/yandex-maps@2.1.21":
+  version "2.1.21"
+  resolved "https://registry.yarnpkg.com/@types/yandex-maps/-/yandex-maps-2.1.21.tgz#d3801ddbd2541412a8a8693edb168c6702b407a1"
+  integrity sha512-rRLCmIODrnzmo7MIGfFRPwPN7ITyAIupUdbeGSC0KqUIvlR7YrY4v8Do7798/WhO4v63B1hCvI+ECwCB4k26AA==
 
 "@typescript-eslint/parser@^5.21.0":
   version "5.30.5"

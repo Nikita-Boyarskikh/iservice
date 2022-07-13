@@ -1,0 +1,18 @@
+@import "swiper/css";
+@import "swiper/css/lazy";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+@import "swiper/css/scrollbar";
+
+.swiper {
+  --swiper-navigation-size: 20px;
+
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    color: var(--color-star);
+
+    & .swiper-button-disabled {
+      color: #e5e5e5;
+    }
+  }
+}

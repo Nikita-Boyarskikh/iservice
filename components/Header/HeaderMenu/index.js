@@ -11,7 +11,7 @@ import PhoneIcon from 'public/icons/phone.svg'
 import ChatIcon from 'public/icons/chat.svg'
 
 const HeaderMenu = () => {
-  const { state, dispatch } = useContext(StateContext)
+  const { state } = useContext(StateContext)
 
   return (
     <div className={styles.menu}>
@@ -30,7 +30,7 @@ const HeaderMenu = () => {
         </a>
       </Link>
 
-      {state.user.isLoggedIn && (
+      {state.user.account && (
         <HeaderMenuProfile account={state.user.account} />
       )}
 
