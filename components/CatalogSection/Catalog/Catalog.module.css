@@ -1,0 +1,32 @@
+.catalog {
+  & .header {
+    font: var(--font-subheader);
+    margin: 0 0 30px;
+  }
+
+  & .items {
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    & .itemSkeleton {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (--desktop-media) {
+  .catalog {
+    & .items {
+      row-gap: 30px;
+
+      & .itemSkeleton {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

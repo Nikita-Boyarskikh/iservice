@@ -3,6 +3,7 @@
   --color-text-contrast: #ffffff;
   --color-text-secondary: #909090;
   --color-text-label: #9f9f9f;
+  --color-placeholder: #b3b3b3;
 
   --color-background-main: #ffffff;
   --color-background-contrast: #000000;
@@ -13,7 +14,10 @@
   --color-border-menu: #515151;
   --color-star: #decb8d;
   --color-text-link: #007bff;
-  --color-success: #2ab138;
+  --color-button: #6e96ff;
+  --color-action: #d9573b;
+  --color-action-hover: #d74728;
+  --color-success: #2de029;
   --color-warning: #ffc107;
   --color-error: #d60d38;
 

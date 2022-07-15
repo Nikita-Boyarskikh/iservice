@@ -1,0 +1,26 @@
+.modalContainer {
+  position: fixed;
+  padding: 0 20px;
+  height: 100vh;
+  width: 100vw;
+  top: 250px;
+  z-index: 102;
+
+  & .modal {
+    margin: 0 auto;
+    width: fit-content;
+    background: var(--color-background-main);
+    border-radius: 10px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background-contrast);
+  opacity: 0.6;
+  z-index: 101;
+}

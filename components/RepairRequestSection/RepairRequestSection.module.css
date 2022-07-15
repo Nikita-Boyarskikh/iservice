@@ -1,0 +1,109 @@
+.repairRequest {
+  color: var(--color-text-contrast);
+  background-color: var(--color-background-contrast);
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+
+  & .repairRequestHeader {
+    font: var(--font-subheader);
+    margin-bottom: 10px;
+  }
+
+  & .repairRequestSubHeader {
+    font: var(--font-menu);
+    margin-bottom: 20px;
+  }
+
+  & .repairRequestForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    & > input,
+    & > textarea {
+      border-radius: 10px;
+      font: var(--font-main);
+      padding: 10px 15px;
+      border: none;
+      resize: none;
+
+      &::placeholder {
+        color: var(--color-placeholder);
+      }
+    }
+
+    & > [name="name"] {
+      grid-area: name;
+    }
+    & > [name="tel"] {
+      grid-area: tel;
+    }
+    & > [name="reason"] {
+      grid-area: reason;
+    }
+    & > [name="description"] {
+      grid-area: description;
+    }
+
+    & > [type="submit"] {
+      grid-area: submit;
+      margin-top: 20px;
+      padding: 10px 30px;
+      color: var(--color-text-contrast);
+      border-radius: 10px;
+      background-color: var(--color-button);
+    }
+  }
+}
+
+.modal {
+  padding: 50px 35px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.modalHeader {
+  font: var(--font-name);
+}
+
+.modalBody {
+  font: var(--font-main);
+}
+
+.modalAction {
+  cursor: pointer;
+  color: var(--color-text-contrast);
+  background-color: var(--color-action);
+  border-radius: 10px;
+  font: var(--font-main);
+  padding: 10px 30px;
+  border: none;
+
+  &:hover {
+    background-color: var(--color-action-hover);
+  }
+}
+
+@media (--desktop-media) {
+  .repairRequest {
+    & .repairRequestForm {
+      display: grid;
+      grid-template: "name   tel    description" 1fr
+                     "reason reason description" 1fr
+                     "submit submit submit"      1fr
+                    / 1fr    1fr    2fr;
+      gap: 20px 30px;
+
+      & > input[type="submit"] {
+        width: fit-content;
+        margin-top: 10px;
+        justify-self: center;
+        padding: 10px 80px;
+      }
+    }
+  }
+}

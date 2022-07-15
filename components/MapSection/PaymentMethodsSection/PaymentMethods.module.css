@@ -1,0 +1,7 @@
+.paymentMethods {
+  display: flex;
+  justify-content: space-around;
+  justify-items: start;
+  padding: 20px 0;
+  background-color: var(--color-background-secondary);
+}

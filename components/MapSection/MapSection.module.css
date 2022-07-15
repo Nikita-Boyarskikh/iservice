@@ -1,0 +1,9 @@
+.map {
+  display: none;
+}
+
+@media (--desktop-media) {
+  .map {
+    display: block;
+  }
+}

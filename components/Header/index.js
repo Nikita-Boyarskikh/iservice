@@ -4,7 +4,7 @@ import HeaderMenu from './HeaderMenu'
 
 import styles from './Header.module.css'
 
-const Header = () => (
+const Header = ({ user }) => (
   <header className={styles.header}>
     <div className={styles.logo}>
       <Logo/>
@@ -14,7 +14,7 @@ const Header = () => (
       <HeaderDropdowns />
     </div>
 
-    <HeaderMenu />
+    <HeaderMenu user={user} />
   </header>
 )
 

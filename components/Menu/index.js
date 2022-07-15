@@ -33,7 +33,7 @@ const Menu = ({ isOpen, isOpenChanged, trigger, offset, children }) => {
 
   useEffect(() => {
     popoversRef.current = document.getElementById('popovers')
-  })
+  }, [])
 
   const menuPortal = popoversRef.current ? createPortal(
     (

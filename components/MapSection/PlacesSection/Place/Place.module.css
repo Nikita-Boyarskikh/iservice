@@ -1,0 +1,15 @@
+.place {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 150px;
+  margin: 0 50px;
+
+  & .price {
+    font: var(--font-caption);
+  }
+
+  & .name {
+    font: var(--font-main);
+  }
+}

@@ -1,4 +1,5 @@
 import Skeleton from 'react-loading-skeleton'
+
 import styles from './Article.module.css'
 
 const Article = ({ img, header, createdAt, children }) => (

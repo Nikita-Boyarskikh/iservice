@@ -1,72 +1,32 @@
-import Catalog from 'components/Catalog'
-import Map, { PLACE_STATUSES, PLACE_TYPES } from 'components/Map'
+import { useContext, useState } from 'react'
+
 import PageLayout from 'components/PageLayout'
-import Swiper from 'components/Swiper'
+import CatalogSection from 'components/CatalogSection'
+import MapSection from 'components/MapSection'
+import RepairRequestSection from 'components/RepairRequestSection'
 
+import { StateContext } from 'state/context'
 import useApi from 'hooks/useApi'
-import { getCatalog } from 'lib/api'
-import Link from 'next/link'
-import { useState } from 'react'
-
-import styles from './Catalog.module.css'
+import { getCatalog, sendRepairRequest } from 'lib/api'
+import useListToggleHandler from 'hooks/useListToggleHandler'
 
 const CatalogPage = () => {
-  const catalog = useApi(getCatalog, 1)
-  const [selectedPlaceIdx, setSelectedPlaceIdx] = useState(null);
+  const { state } = useContext(StateContext)
+  const catalog = useApi(getCatalog, 2)
 
-  const places = [
-    {
-      id: 1,
-      x: 55.755819,
-      y: 37.617644,
-      name: 'Joseph Gonzalez',
-      avatar: 'images/joseph_gonzalez.png',
-      type: PLACE_TYPES.SERVICE,
-      rating: 5.0,
-      status: PLACE_STATUSES.ONLINE,
-      reviews: 23,
-      startFrom: new Date(),
-      price: 123,
-    }
-  ]
+  const [selectedPlaceId, setSelectedPlaceId] = useState(null)
+  const changeOpenId = useListToggleHandler(selectedPlaceId, setSelectedPlaceId)
 
   return (
-    <PageLayout>
-      <section className={styles.catalogContainer}>
-        <div className={styles.catalog}>
-          {catalog.map(({ section, items }, i) => (
-            <Catalog header={section} items={items} activeItemIdx={0} key={i} />
-          ))}
-        </div>
-
-        <div className={styles.preview}>
-          <img src="images/iphone_11_pro_max.png" alt="preview" className={styles.image} />
-          <span className={styles.remark}>Запчасти для ремонта уже включены в стоимость работы эта окончательная цена</span>
-        </div>
-      </section>
-
-      <section className={styles.repairRequest}></section>
-
-      <section className={styles.map}>
-        <div className={styles.places}>
-          <Swiper slides={places.map(({ name, price, id }) => (
-            <Link href={`/catalog/${id}`} key={id}><a>
-              <div className={styles.place}>
-                <div className={styles.name}>{name}</div>
-                <div className={styles.price}>{price}</div>
-              </div>
-            </a></Link>
-          ))} withScrollbar />
-        </div>
-
-        <Map
-          x={55.755819}
-          y={37.617644}
-          places={places}
-          selectedPlaceIdx={selectedPlaceIdx}
-          onChangeSelectedPlaceIdx={setSelectedPlaceIdx}
-        />
-      </section>
+    <PageLayout reviews={state.reviews} articles={state.articles}>
+      <CatalogSection catalog={catalog} selectedPlaceId={selectedPlaceId} toggle={changeOpenId} />
+      <RepairRequestSection onSubmit={sendRepairRequest} />
+      <MapSection
+        catalog={catalog}
+        selectedPlaceId={selectedPlaceId}
+        toggle={changeOpenId}
+        currentPaymentMethod={state.user.paymentMethods.current}
+      />
     </PageLayout>
   )
 }
