@@ -12,7 +12,6 @@ const useListToggleHandler = (activeId, onChangeId) => {
 
   return useCallback((id) => {
     const selected = selectedRef.current
-    console.log(id, activeId, selected)
     if (id === activeId) {
       selected.delete(id)
     } else {

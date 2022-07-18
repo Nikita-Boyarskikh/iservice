@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useContext, useState } from 'react'
 
 import PageLayout from 'components/PageLayout'
@@ -10,9 +11,13 @@ import useApi from 'hooks/useApi'
 import { getCatalog, sendRepairRequest } from 'lib/api'
 import useListToggleHandler from 'hooks/useListToggleHandler'
 
-const CatalogPage = () => {
+const CatalogModelPage = () => {
+  const router = useRouter()
   const { state } = useContext(StateContext)
-  const catalog = useApi(getCatalog, 2)
+  const catalog = useApi(() => getCatalog({
+    deviceType: router.query.deviceType,
+    model: router.query.model,
+  }), 2)
 
   const [selectedPlaceId, setSelectedPlaceId] = useState(null)
   const changeOpenId = useListToggleHandler(selectedPlaceId, setSelectedPlaceId)
@@ -31,4 +36,4 @@ const CatalogPage = () => {
   )
 }
 
-export default CatalogPage
+export default CatalogModelPage

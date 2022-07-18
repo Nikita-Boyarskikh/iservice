@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 
 import Modal from 'components/Modal'
+import Button from 'components/Button'
 
 import styles from './RepairRequestSection.module.css'
 
@@ -38,7 +39,7 @@ const RepairRequestSection = ({ onSubmit }) => {
           <main className={styles.modalBody}>
             Вам будет предоставлен список мастеров готовых взяться выполнить заказ
           </main>
-          <button className={styles.modalAction} onClick={() => setIsOpen(false)}>ОК</button>
+          <Button small onClick={() => setIsOpen(false)}>ОК</Button>
         </div>
       </Modal>
     </>

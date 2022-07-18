@@ -1,0 +1,10 @@
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-main);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}

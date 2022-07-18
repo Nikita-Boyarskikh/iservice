@@ -17,7 +17,7 @@ const CatalogSection = ({ catalog, selectedPlaceId, toggle }) => (
     </div>
 
     <div className={styles.preview}>
-      <img src="images/iphone_11_pro_max.png" alt="preview" className={styles.image} />
+      <img src="/images/iphone_11_pro_max.png" alt="preview" className={styles.image} />
       <span className={styles.remark}>
         Запчасти для ремонта уже включены в стоимость работы эта окончательная цена
       </span>

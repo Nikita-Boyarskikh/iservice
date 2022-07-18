@@ -74,20 +74,6 @@
   font: var(--font-main);
 }
 
-.modalAction {
-  cursor: pointer;
-  color: var(--color-text-contrast);
-  background-color: var(--color-action);
-  border-radius: 10px;
-  font: var(--font-main);
-  padding: 10px 30px;
-  border: none;
-
-  &:hover {
-    background-color: var(--color-action-hover);
-  }
-}
-
 @media (--desktop-media) {
   .repairRequest {
     & .repairRequestForm {
