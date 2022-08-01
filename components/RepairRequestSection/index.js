@@ -3,6 +3,8 @@ import { useCallback, useRef, useState } from 'react'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 
+import { validateForm } from 'lib/utils'
+
 import styles from './RepairRequestSection.module.css'
 
 const RepairRequestSection = ({ onSubmit }) => {
@@ -12,6 +14,10 @@ const RepairRequestSection = ({ onSubmit }) => {
   const handleSubmit = useCallback((event) => {
     event.preventDefault()
     setIsOpen(true)
+    if (!validateForm(formRef.current)) {
+      return
+    }
+
     const formData = new FormData(formRef.current)
     const data = Object.fromEntries(formData.entries())
     onSubmit(data)

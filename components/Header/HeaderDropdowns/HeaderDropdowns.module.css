@@ -15,6 +15,11 @@
   & .dropdownArrow {
     display: flex;
     margin-left: 5px;
+
+    & svg {
+      width: 10px;
+      height: 10px;
+    }
   }
 
   & .dropdownArrowOpened {
@@ -28,5 +33,10 @@
   & .moreContent {
     transform: rotate(-90deg);
     height: 12px;
+
+    & svg {
+      width: 10px;
+      height: 10px;
+    }
   }
 }

@@ -1,8 +1,8 @@
-import useOnClickOutside from 'hooks/useOnClickOutside'
 import { useCallback, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 
 import Fade from 'transitions/fade'
+import useOnClickOutside from 'hooks/useOnClickOutside'
 
 import styles from './Modal.module.css'
 

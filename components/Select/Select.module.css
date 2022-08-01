@@ -1,0 +1,53 @@
+.trigger {
+  width: 100%;
+  position: relative;
+
+  & .input {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 50px;
+
+    &.opened {
+      border-bottom: none;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  & .select {
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    position: absolute;
+  }
+
+  & .arrow {
+    position: absolute;
+    right: 32px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    &.arrowUp {
+      transform: rotate(180deg);
+    }
+
+    & svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+.options {
+  background-color: var(--color-background-main);
+  border: 2px solid var(--color-border-main);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+
+  & .option {
+    padding: 20px 30px;
+    cursor: pointer;
+  }
+}

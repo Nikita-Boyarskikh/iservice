@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useMemo, useState } from 'react'
 
-import styles from './ImageCircle.module.css';
+import styles from './ImageCircle.module.css'
 
 const ImageCircle = ({ alt, src = 'public/images/iphone_11_pro_max.png', padding = 15 })  => {
   const [image, setImage] = useState(null)

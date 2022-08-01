@@ -1,0 +1,12 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (--desktop-media) {
+  .registration {
+    flex-direction: row;
+  }
+}

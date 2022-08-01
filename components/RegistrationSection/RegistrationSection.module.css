@@ -1,0 +1,7 @@
+.registration {
+  width: 33vw;
+  margin: auto;
+  row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+}

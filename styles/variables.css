@@ -23,9 +23,6 @@
 
   --color-shadow: rgba(0, 0, 0, 0.15);
 
-  --border-main: 1px solid var(--color-border-main);
-  --border-menu: 1px solid var(--color-border-menu);
-
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-bold: 700;

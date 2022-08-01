@@ -1,0 +1,29 @@
+.registrationType {
+  display: flex;
+  flex-direction: column;
+  padding: 8vh 8vw;
+  border: 2px solid var(--color-border-main);
+  border-radius: 20px;
+  align-items: center;
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-border-main);
+  color: var(--color-border-main);
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+
+  & .icon {
+    height: 115px;
+    aspect-ratio: 1/1;
+  }
+
+  & .header {
+    margin-top: 30px;
+    font: var(--font-name);
+  }
+
+  & .description {
+    margin-top: 10px;
+    font: var(--font-main);
+  }
+}
