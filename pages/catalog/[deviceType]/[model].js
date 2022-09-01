@@ -9,7 +9,6 @@ import RepairRequestSection from 'components/RepairRequestSection'
 import { StateContext } from 'state/context'
 import useApi from 'hooks/useApi'
 import { getCatalog, sendRepairRequest } from 'lib/api'
-import useListToggleHandler from 'hooks/useListToggleHandler'
 
 const CatalogModelPage = () => {
   const router = useRouter()
