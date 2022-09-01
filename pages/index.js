@@ -15,7 +15,7 @@ const IndexPage = () => {
   return (
     <PageLayout reviews={state.reviews} articles={state.articles}>
       <Hero />
-      <AdvantagesSection advantages={advantages} />
+      {/*<AdvantagesSection advantages={advantages} />*/}
     </PageLayout>
   )
 }

@@ -18,8 +18,8 @@ const HeaderMenu = ({ user }) => (
       </a>
     </span>
 
-    <Link href="/chat">
-      <a>
+    <Link href="/profile/chat">
+      <a className={styles.chat}>
         <ChatIcon alt="chat" />
       </a>
     </Link>

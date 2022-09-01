@@ -15,3 +15,8 @@ export const PAYMENT_METHOD_TYPES = {
   CASH: 'cash',
   BANK_CARD: 'bank_card',
 }
+
+export const MESSAGE_STATUSES = {
+  READ: 'read',
+  UNREAD: 'unread',
+}

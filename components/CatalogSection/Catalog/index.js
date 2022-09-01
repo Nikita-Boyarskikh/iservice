@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import Skeleton from 'react-loading-skeleton'
 
 import useIsMobile from 'hooks/useIsMobile'
@@ -7,15 +6,8 @@ import CatalogItem from './CatalogItem'
 
 import styles from './Catalog.module.css'
 
-const Catalog = ({ header, items, activeItemId, toggle }) => {
+const Catalog = ({ header, items, activeItemIds, toggle }) => {
   const isMobile = useIsMobile()
-
-  const handleClickItem = useCallback((id) => {
-    if (id !== activeItemId) {
-      toggle(activeItemId)
-    }
-    toggle(id)
-  }, [activeItemId, toggle])
 
   return (
     <div className={styles.catalog}>
@@ -31,8 +23,8 @@ const Catalog = ({ header, items, activeItemId, toggle }) => {
                 price={price}
                 minutes={minutes}
                 features={features}
-                active={activeItemId === id}
-                onClick={() => handleClickItem(id)}
+                active={activeItemIds.includes(id)}
+                onClick={() => toggle(id)}
               />
             </li>
           ))

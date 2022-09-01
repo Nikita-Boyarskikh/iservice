@@ -19,17 +19,17 @@ const CatalogModelPage = () => {
     model: router.query.model,
   }), 2)
 
-  const [selectedPlaceId, setSelectedPlaceId] = useState(null)
-  const changeOpenId = useListToggleHandler(selectedPlaceId, setSelectedPlaceId)
+  const [selectedItems, setSelectedItems] = useState([])
+  const [mapOpenedItem, setMapOpenedItem] = useState(null)
 
   return (
     <PageLayout reviews={state.reviews} articles={state.articles}>
-      <CatalogSection catalog={catalog} selectedPlaceId={selectedPlaceId} toggle={changeOpenId} />
+      <CatalogSection catalog={catalog} selectedItems={selectedItems} onChangeSelectedItems={setSelectedItems} />
       <RepairRequestSection onSubmit={sendRepairRequest} />
       <MapSection
         catalog={catalog}
-        selectedPlaceId={selectedPlaceId}
-        toggle={changeOpenId}
+        selectedPlaceId={mapOpenedItem}
+        toggle={setMapOpenedItem}
         currentPaymentMethod={state.user.paymentMethods.current}
       />
     </PageLayout>

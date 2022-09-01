@@ -1,0 +1,105 @@
+.container {
+  padding: 15px;
+  display: flex;
+  align-content: center;
+  background-color: var(--color-background-secondary);
+  border-radius: 15px;
+  font: var(--font-main);
+  cursor: pointer;
+
+  & .avatar {
+    position: relative;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    margin-right: 15px;
+
+    & img {
+      margin: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      overflow: hidden;
+    }
+
+    & svg {
+      display: none;
+    }
+
+    &.online {
+      border: solid 2px var(--color-success);
+
+      & svg {
+        position: absolute;
+        left: 82px;
+        top: 76px;
+        width: 7px;
+        height: 7px;
+        display: block;
+        color: var(--color-success);
+      }
+    }
+  }
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & .name {
+      font: var(--font-name);
+      margin-bottom: 10px;
+    }
+
+    & .type {
+      margin-bottom: 5px;
+    }
+
+    & .message {
+      margin-bottom: 5px;
+      color: var(--color-text-label);
+    }
+
+    & .rating {
+      display: flex;
+      align-items: center;
+
+      & .reviews {
+        margin-left: 10px;
+        font: var(--font-caption);
+        line-height: 25px;
+        color: var(--color-border-main);
+      }
+    }
+  }
+
+  & .lastMessageStatus {
+    display: none
+  }
+}
+
+@media (--desktop-media) {
+  .container {
+    & .lastMessageStatus {
+      display: flex;
+      margin-left: auto;
+
+      & .status {
+        margin-right: 4px;
+        color: var(--color-text-link);
+
+        &.read {
+          width: 15px;
+        }
+
+        &.unread {
+          width: 7px;
+        }
+      }
+
+      & .date {
+        color: var(--color-text-label);
+      }
+    }
+  }
+}

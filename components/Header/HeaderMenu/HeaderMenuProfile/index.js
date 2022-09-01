@@ -53,7 +53,7 @@ const HeaderMenuProfile = ({ account }) => {
 
   if (isMobile) {
     return (
-      <Link href="/profile"><a>{trigger}</a></Link>
+      <Link href="/profile/profile"><a>{trigger}</a></Link>
     )
   }
 

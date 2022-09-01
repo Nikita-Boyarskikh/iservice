@@ -1,0 +1,36 @@
+.container {
+  padding: 20px 30px;
+  border-radius: 15px;
+  background-color: var(--color-background-main);
+  height: 100%;
+
+  & .headline {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    font: var(--font-caption);
+
+    & .header {
+      margin-right: 10px;
+    }
+
+    & .mutedIcon {
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+
+  & .scrollArea {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: calc(100% - 70px);
+
+    & .master {
+      width: 100%;
+    }
+  }
+}

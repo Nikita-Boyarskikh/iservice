@@ -130,7 +130,7 @@ const Map = ({
 }) => {
   return (
     <YandexMap defaultState={{ center: [x, y], zoom }} width={width} height={height}>
-      {places.map(({ place: { x, y }, seller: { name, avatar, type, rating, status, reviews, startFrom }, id }) => (
+      {places.map(({ place: { x, y }, master: { name, avatar, type, rating, status, reviews, startFrom }, id }) => (
         <Placemark
           key={id}
           id={id}

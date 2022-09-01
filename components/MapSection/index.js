@@ -21,8 +21,8 @@ const MapSection = ({ catalog, selectedPlaceId, toggle, currentPaymentMethod }) 
       <PlacesSection places={places} />
 
       <Map
-        x={55.755819}
-        y={37.617644}
+        x={59.939099}
+        y={30.315877}
         places={places}
         selectedPlaceId={selectedPlaceId}
         toggle={toggle}

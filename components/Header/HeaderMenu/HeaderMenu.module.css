@@ -20,6 +20,11 @@
   & .burger {
     display: block;
   }
+
+  & .chat svg {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (--desktop-media) {
